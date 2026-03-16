@@ -39,10 +39,10 @@ const translations = {
 			sv: 'Förväntningar och en snabb överblick av vad AI kan göra idag. Var står vi — och vart är vi på väg?',
 			en: 'Expectations and a quick overview of what AI can do today. Where are we — and where are we headed?'
 		},
-		block2Title: { sv: 'Inspiration & live-demos', en: 'Inspiration & live demos' },
+		block2Title: { sv: 'Introduktion & live-demos', en: 'Introduction & live demos' },
 		block2Desc: {
-			sv: 'Vi visar hur AI-verktygen fungerar i praktiken. Från idé till fungerande app på minuter — live, utan manus.',
-			en: 'We show how AI tools work in practice. From idea to working app in minutes — live, no script.'
+			sv: 'Välkomna, förväntningar och en överblick av vad AI kan göra idag. Sedan visar vi hur verktygen fungerar i praktiken — från idé till fungerande app på minuter, live.',
+			en: 'Welcome, expectations and an overview of what AI can do today. Then we show how the tools work in practice — from idea to working app in minutes, live.'
 		},
 		block3Title: { sv: 'Idéworkshop', en: 'Idea workshop' },
 		block3Desc: {
@@ -52,8 +52,8 @@ const translations = {
 		block4Title: { sv: 'Hands-on: Bygg din lösning', en: 'Hands-on: Build your solution' },
 		block4Badge: { sv: 'Huvudpass', en: 'Main session' },
 		block4Desc: {
-			sv: 'Välj ett verktyg (Lovable, Replit) och börja bygga din idé med stöd av en AI-coach.',
-			en: 'Pick a tool (Lovable, Replit) and start building your idea with support from an AI coach.'
+			sv: 'Vad vill du bygga? Vi hittar din idé, väljer verktyg (Lovable, Replit) och bygger — med stöd av en AI-coach.',
+			en: 'What do you want to build? We find your idea, pick a tool (Lovable, Replit) and build — with support from an AI coach.'
 		},
 		block5Title: { sv: 'Visa & berätta', en: 'Show & tell' },
 		block5Desc: {
