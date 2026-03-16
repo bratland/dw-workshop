@@ -210,8 +210,8 @@
 	<!-- About Anders -->
 	<section data-slide class="px-6 md:px-12 py-20">
 		<div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-10 md:gap-16 items-start">
-			<div class="shrink-0">
-				<div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-navy overflow-hidden flex items-center justify-center relative">
+			<div class="shrink-0 w-full md:w-72">
+				<div class="w-full aspect-[16/10] rounded-lg bg-navy overflow-hidden flex items-center justify-center relative">
 					<span class="text-white text-3xl md:text-4xl font-bold select-none">AB</span>
 					<img src="/anders.jpg" alt="Anders Bratland" class="absolute inset-0 w-full h-full object-cover" onerror={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }} />
 				</div>
