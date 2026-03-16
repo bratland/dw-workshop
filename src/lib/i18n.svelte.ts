@@ -25,10 +25,10 @@ const translations = {
 			sv: 'Resurser och verktyg från vår workshop. Allt du behöver för att komma igång med att bygga appar och lösningar med hjälp av AI.',
 			en: 'Resources and tools from our workshop. Everything you need to start building apps and solutions with AI.'
 		},
-		cta: { sv: 'Utforska verktyg', en: 'Explore tools' }
+		cta: { sv: 'Kom igång', en: 'Get started' }
 	},
 	agenda: {
-		label: { sv: 'Typisk upplägg', en: 'Typical format' },
+		label: { sv: 'Typiskt upplägg', en: 'Typical format' },
 		title: { sv: 'Workshop-agenda', en: 'Workshop agenda' },
 		description: {
 			sv: 'Inspiration, live-demos och hands-on byggande. Du går härifrån med konkreta saker du kan börja göra annorlunda redan nästa vecka.',
@@ -46,7 +46,7 @@ const translations = {
 		},
 		block3Title: { sv: 'Idéworkshop', en: 'Idea workshop' },
 		block3Desc: {
-			sv: 'Vad vill du bygga? Vi brainstormar och identifierar konkreta utmaningar i din vardag som AI kan lösa.',
+			sv: 'Vad vill du bygga? Vi hittar konkreta utmaningar i din vardag som AI kan lösa.',
 			en: 'What do you want to build? We brainstorm and identify concrete challenges in your daily work that AI can solve.'
 		},
 		block4Title: { sv: 'Hands-on: Bygg din lösning', en: 'Hands-on: Build your solution' },
@@ -72,16 +72,76 @@ const translations = {
 	about: {
 		label: { sv: 'Din workshopledare', en: 'Your workshop leader' },
 		bio1: {
-			sv: 'AI-Coach och grundare av Daily Wins. 10+ års erfarenhet av AI-teknik och affärseffekt. Hjälper små och medelstora företag att implementera AI utan egen AI-avdelning — från idé till mätbara resultat.',
+			sv: 'AI-Coach och grundare av Daily Wins. 10+ års erfarenhet av AI-teknik och affärsnytta. Hjälper små och medelstora företag att implementera AI utan egen AI-avdelning — från idé till mätbara resultat.',
 			en: 'AI Coach and founder of Daily Wins. 10+ years of experience in AI technology and business impact. Helping small and medium-sized businesses implement AI without their own AI department — from idea to measurable results.'
 		},
 		bio2: {
-			sv: 'Anders spenderar 12+ timmar om dagen med att bygga AI-lösningar och har hands-on erfarenhet av samtliga verktyg på den här sidan. Workshopsen handlar inte om teori — utan om att bygga på riktigt, tillsammans.',
+			sv: 'Anders lägger 12+ timmar om dagen på att bygga AI-lösningar och har hands-on erfarenhet av samtliga verktyg på den här sidan. Workshopsen handlar inte om teori — utan om att bygga på riktigt, tillsammans.',
 			en: 'Anders spends 12+ hours a day building AI solutions and has hands-on experience with every tool on this page. The workshops are not about theory — but about building for real, together.'
 		}
 	},
+	why: {
+		label: { sv: 'Bakgrund', en: 'Background' },
+		title: { sv: 'Varför den här workshopen?', en: 'Why this workshop?' },
+		lead: {
+			sv: 'För två år sedan var AI-frågan enkel: "Har ni börjat använda ChatGPT?" Idag är den frågan lika relevant som att fråga om ni har internet. Det som händer just nu — efter ChatGPT-eran — är något helt annat.',
+			en: 'Two years ago, the AI question was simple: "Have you started using ChatGPT?" Today, that question is as relevant as asking if you have internet. What\'s happening right now — after the ChatGPT era — is something entirely different.'
+		},
+		shift: {
+			sv: 'Från att fråga till att bygga',
+			en: 'From asking to building'
+		},
+		shiftDesc: {
+			sv: 'AI svarar inte bara på frågor längre — den bygger hela lösningar. Och det mest anmärkningsvärda: det är inte längre bara utvecklare som bygger dem. MIT Technology Review utsåg det till en av 2026 års genombrottsteknologier.',
+			en: 'AI no longer just answers questions — it builds entire solutions. And the most remarkable thing: it\'s no longer just developers who build them. MIT Technology Review named it one of 2026\'s breakthrough technologies.'
+		},
+		moment: {
+			sv: 'Ögonblicket som förändrar allt',
+			en: 'The moment that changes everything'
+		},
+		momentDesc: {
+			sv: 'I våra workshops bygger vanliga medarbetare sina egna verktyg med AI — med sina egna problem. Det lyser i ögonen på människor. De går från "jag är inte en teknisk person" till "jag kan bygga lösningar". Det är en identitetsförskjutning — den enda typen av förändring som faktiskt håller.',
+			en: 'In our workshops, regular employees build their own tools with AI — solving their own problems. People\'s eyes light up. They go from "I\'m not a technical person" to "I can build solutions." It\'s an identity shift — the only type of change that actually sticks.'
+		},
+		quote: {
+			sv: '"Det svåraste att begripa är hur enkelt det faktiskt är. Så länge du inte har upplevt det själv kommer du att underskatta det."',
+			en: '"The hardest thing to grasp is how simple it actually is. As long as you haven\'t experienced it yourself, you will underestimate it."'
+		},
+		bottom: {
+			sv: 'ChatGPT var steg ett — att fråga. Det här är steg två — att bygga. Och steg två förändrar allt.',
+			en: 'ChatGPT was step one — asking. This is step two — building. And step two changes everything.'
+		}
+	},
+	goals: {
+		label: { sv: 'Mål', en: 'Goals' },
+		title: { sv: 'Det här tar du med dig', en: 'What you take away' },
+		description: {
+			sv: 'Workshopen handlar inte om att lyssna — utan om att göra. När du går härifrån har du:',
+			en: 'This workshop is not about listening — it\'s about doing. When you leave, you will have:'
+		},
+		goal1Title: { sv: 'Byggt en egen app', en: 'Built your own app' },
+		goal1Desc: {
+			sv: 'En fungerande prototyp som löser ett verkligt problem i din vardag. Inte en övning — något du faktiskt kan använda.',
+			en: 'A working prototype that solves a real problem in your daily work. Not an exercise — something you can actually use.'
+		},
+		goal2Title: { sv: 'Förstått vad AI kan idag', en: 'Understood what AI can do today' },
+		goal2Desc: {
+			sv: 'Inte teori, utan hands-on förståelse. Du har sett och upplevt skillnaden mellan att fråga AI och att bygga med AI.',
+			en: 'Not theory, but hands-on understanding. You\'ve seen and experienced the difference between asking AI and building with AI.'
+		},
+		goal3Title: { sv: 'Verktygslådan klar', en: 'Toolbox ready' },
+		goal3Desc: {
+			sv: 'Du vet vilka verktyg som passar dig, har konton redo och vet exakt hur du fortsätter på egen hand.',
+			en: 'You know which tools suit you, have accounts ready, and know exactly how to continue on your own.'
+		},
+		goal4Title: { sv: 'Ny bild av dig själv', en: 'New self-image' },
+		goal4Desc: {
+			sv: 'Du har gått från "jag är inte en teknisk person" till "jag kan bygga lösningar". Det är den förändring som håller.',
+			en: 'You\'ve gone from "I\'m not a technical person" to "I can build solutions." That\'s the change that sticks.'
+		}
+	},
 	toolsIntro: {
-		title: { sv: 'Verktyg', en: 'Tools' },
+		title: { sv: 'Nu kör vi!', en: "Let's go!" },
 		description: {
 			sv: 'Här är de AI-verktyg vi använder och rekommenderar. Välj utifrån din erfarenhetsnivå och vad du vill bygga.',
 			en: 'Here are the AI tools we use and recommend. Choose based on your experience level and what you want to build.'
@@ -113,7 +173,7 @@ const translations = {
 			sv: 'Chatta vidare för att ändra: "Gör knapparna blå" eller "Lägg till en sida för statistik"',
 			en: 'Keep chatting to make changes: "Make the buttons blue" or "Add a page for statistics"'
 		},
-		examplesTitle: { sv: 'Exempelpromptar att testa', en: 'Example prompts to try' },
+		examplesTitle: { sv: 'Prova dessa', en: 'Try these' },
 		example1: {
 			sv: '"Skapa en tidrapport-app där man kan logga timmar per projekt. Varje rad har datum, projekt, antal timmar och en kommentar. Visa en veckosammanfattning med totalt antal timmar."',
 			en: '"Create a time tracking app where you can log hours per project. Each row has date, project, hours and a comment. Show a weekly summary with total hours."'
@@ -137,7 +197,7 @@ const translations = {
 			sv: 'Försök inte beskriva hela appen i en enda prompt. Börja med grundfunktionen, sedan bygg ut.',
 			en: "Don't try to describe the whole app in one prompt. Start with the core feature, then expand."
 		},
-		mistake3Label: { sv: 'Glömmer spara:', en: 'Forgetting to save:' },
+		mistake3Label: { sv: 'Glömmer att spara:', en: 'Forgetting to save:' },
 		mistake3: {
 			sv: 'Klicka "Publish" regelbundet — det är din save-knapp. Om något går fel kan du gå tillbaka.',
 			en: 'Click "Publish" regularly — it\'s your save button. If something goes wrong you can go back.'
@@ -544,7 +604,7 @@ const translations = {
 			sv: 'Istället för "bygg en app" — beskriv exakt vad appen ska göra, vilka fält som behövs, och hur den ska se ut.',
 			en: 'Instead of "build an app" — describe exactly what the app should do, which fields are needed, and how it should look.'
 		},
-		tip3Title: { sv: 'Iterera i små steg', en: 'Iterate in small steps' },
+		tip3Title: { sv: 'Bygg i små steg', en: 'Build in small steps' },
 		tip3Desc: {
 			sv: 'Bygg en funktion i taget. Testa. Justera. Gå vidare. Samma princip som i traditionell utveckling — fast 10x snabbare.',
 			en: 'Build one feature at a time. Test. Adjust. Move on. Same principle as traditional development — but 10x faster.'
@@ -564,8 +624,8 @@ const translations = {
 		cta: { sv: 'BESÖK DAILYWINS.SE', en: 'VISIT DAILYWINS.SE' }
 	},
 	footer: {
-		tagline: { sv: 'Accelera vinsten med AI', en: 'Accelerate profit with AI' },
-		lecture: { sv: 'Föreläsning', en: 'Lecture' },
+		tagline: { sv: 'Öka vinsten med AI', en: 'Accelerate profit with AI' },
+		lecture: { sv: 'Kontakt', en: 'Contact' },
 		address: { sv: 'Adress', en: 'Address' }
 	}
 } as const;

@@ -13,6 +13,8 @@
 	const hero = $derived(t('hero'));
 	const agenda = $derived(t('agenda'));
 	const about = $derived(t('about'));
+	const why = $derived(t('why'));
+	const goals = $derived(t('goals'));
 	const toolsIntro = $derived(t('toolsIntro'));
 	const lovable = $derived(t('lovable'));
 	const replit = $derived(t('replit'));
@@ -210,8 +212,8 @@
 	<!-- About Anders -->
 	<section data-slide class="px-6 md:px-12 py-20">
 		<div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-10 md:gap-16 items-start">
-			<div class="shrink-0 w-full md:w-72">
-				<div class="w-full aspect-[16/10] rounded-lg bg-navy overflow-hidden flex items-center justify-center relative">
+			<div class="shrink-0">
+				<div class="w-36 h-36 md:w-48 md:h-48 rounded-full bg-navy overflow-hidden flex items-center justify-center relative">
 					<span class="text-white text-3xl md:text-4xl font-bold select-none">AB</span>
 					<img src="/anders.jpg" alt="Anders Bratland" class="absolute inset-0 w-full h-full object-cover" onerror={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }} />
 				</div>
@@ -228,6 +230,72 @@
 					</a>
 					<span class="text-muted">anders@dailywins.se</span>
 					<span class="text-muted">0732-707 280</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Why this workshop -->
+	<section data-slide class="bg-navy text-white px-6 md:px-12 py-20">
+		<div class="max-w-4xl mx-auto">
+			<p class="text-blue-accent text-sm font-bold uppercase tracking-[2px] mb-4">{why.label}</p>
+			<h2 class="text-5xl md:text-6xl font-bold mb-6 tracking-tight">{why.title}</h2>
+			<p class="text-white/70 text-lg leading-[1.55] mb-12 max-w-3xl">{why.lead}</p>
+
+			<div class="grid md:grid-cols-2 gap-8 mb-12">
+				<div class="border border-white/10 rounded-lg p-6">
+					<h3 class="text-xl font-bold mb-3">{why.shift}</h3>
+					<p class="text-white/60 leading-[1.55]">{why.shiftDesc}</p>
+				</div>
+				<div class="border border-white/10 rounded-lg p-6">
+					<h3 class="text-xl font-bold mb-3">{why.moment}</h3>
+					<p class="text-white/60 leading-[1.55]">{why.momentDesc}</p>
+				</div>
+			</div>
+
+			<blockquote class="border-l-4 border-lime pl-6 py-2 mb-10">
+				<p class="text-white/80 text-lg leading-[1.55] italic">{why.quote}</p>
+			</blockquote>
+
+			<p class="text-white/50 text-lg leading-[1.55] max-w-2xl">{why.bottom}</p>
+		</div>
+	</section>
+
+	<!-- Goals -->
+	<section data-slide class="bg-bg-warm px-6 md:px-12 py-20">
+		<div class="max-w-4xl mx-auto">
+			<p class="text-blue-accent text-sm font-bold uppercase tracking-[2px] mb-4">{goals.label}</p>
+			<h2 class="text-5xl md:text-6xl font-bold mb-4 tracking-tight">{goals.title}</h2>
+			<p class="text-gray-text text-lg leading-[1.55] mb-12">{goals.description}</p>
+
+			<div class="grid md:grid-cols-2 gap-6">
+				<div class="bg-white rounded-lg p-6 flex gap-4">
+					<span class="shrink-0 w-10 h-10 rounded-full bg-lime flex items-center justify-center text-navy font-bold text-lg">1</span>
+					<div>
+						<h3 class="font-bold text-lg mb-1">{goals.goal1Title}</h3>
+						<p class="text-gray-text leading-[1.55]">{goals.goal1Desc}</p>
+					</div>
+				</div>
+				<div class="bg-white rounded-lg p-6 flex gap-4">
+					<span class="shrink-0 w-10 h-10 rounded-full bg-lime flex items-center justify-center text-navy font-bold text-lg">2</span>
+					<div>
+						<h3 class="font-bold text-lg mb-1">{goals.goal2Title}</h3>
+						<p class="text-gray-text leading-[1.55]">{goals.goal2Desc}</p>
+					</div>
+				</div>
+				<div class="bg-white rounded-lg p-6 flex gap-4">
+					<span class="shrink-0 w-10 h-10 rounded-full bg-lime flex items-center justify-center text-navy font-bold text-lg">3</span>
+					<div>
+						<h3 class="font-bold text-lg mb-1">{goals.goal3Title}</h3>
+						<p class="text-gray-text leading-[1.55]">{goals.goal3Desc}</p>
+					</div>
+				</div>
+				<div class="bg-white rounded-lg p-6 flex gap-4">
+					<span class="shrink-0 w-10 h-10 rounded-full bg-lime flex items-center justify-center text-navy font-bold text-lg">4</span>
+					<div>
+						<h3 class="font-bold text-lg mb-1">{goals.goal4Title}</h3>
+						<p class="text-gray-text leading-[1.55]">{goals.goal4Desc}</p>
+					</div>
 				</div>
 			</div>
 		</div>
