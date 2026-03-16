@@ -135,21 +135,23 @@
 	</header>
 
 	<!-- Hero -->
-	<section data-slide class="hero bg-white md:min-h-dvh md:flex md:flex-col md:justify-center">
-		<div class="px-6 md:px-12 pt-16 pb-20 md:pt-28 md:pb-36 max-w-5xl">
-			<h1 class="text-6xl md:text-7xl lg:text-[72px] font-bold leading-[1.05] tracking-[-0.02em] mb-8 text-navy">
+	<section data-slide class="hero relative overflow-hidden bg-navy text-white md:min-h-dvh md:flex md:flex-col md:justify-center">
+		<img src="/hero-banner.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40" />
+		<div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent"></div>
+		<div class="relative z-10 px-6 md:px-12 pt-20 pb-24 md:pt-32 md:pb-40 max-w-5xl">
+			<h1 class="text-6xl md:text-7xl lg:text-[72px] font-bold leading-[1.05] tracking-[-0.02em] mb-8">
 				{hero.title1}<br />
-				<span class="italic text-blue-accent">AI</span>
+				<span class="italic text-lime">AI</span>
 			</h1>
-			<p class="text-lg text-gray-text max-w-xl leading-[1.55]">
+			<p class="text-lg text-white/70 max-w-xl leading-[1.55]">
 				{hero.description}
 			</p>
 			<div class="flex flex-wrap gap-4 mt-10">
-				<a href="#verktyg" class="inline-flex items-center gap-2 bg-navy text-white text-[13px] font-bold uppercase tracking-[1.5px] rounded-full py-[13px] px-[28px] hover:bg-navy/90 transition-colors">
+				<a href="#verktyg" class="inline-flex items-center gap-2 bg-lime text-navy text-[13px] font-bold uppercase tracking-[1.5px] rounded-full py-[13px] px-[28px] hover:brightness-110 transition-all">
 					{hero.cta}
 					<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
 				</a>
-				<a href="https://dailywins.se" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-navy/20 text-navy text-[13px] font-bold uppercase tracking-[1.5px] rounded-full py-[13px] px-[28px] hover:border-navy/40 transition-colors">
+				<a href="https://dailywins.se" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-white/30 text-white text-[13px] font-bold uppercase tracking-[1.5px] rounded-full py-[13px] px-[28px] hover:border-white/50 transition-colors">
 					{lang === 'sv' ? 'Om Daily Wins' : 'About Daily Wins'}
 				</a>
 			</div>
