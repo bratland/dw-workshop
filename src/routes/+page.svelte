@@ -8,6 +8,7 @@
 	let currentSlide = $state(0);
 	let totalSlides = $state(0);
 	let isDesktop = $state(false);
+	let showQr = $state(true);
 
 	const header = $derived(t('header'));
 	const hero = $derived(t('hero'));
@@ -63,6 +64,8 @@
 			if (!mediaQuery.matches) return;
 			const tag = (e.target as HTMLElement).tagName;
 			if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+
+			if (e.key === 'q' || e.key === 'Q') { showQr = !showQr; return; }
 
 			let direction = 0;
 			if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'PageDown' || (e.key === ' ' && !e.shiftKey)) {
@@ -729,6 +732,13 @@
 			<div class="bg-white p-4 rounded-lg"><QrCode url={siteUrl} size={200} /></div>
 		</div>
 	</section>
+
+	<!-- Floating QR code (desktop only, toggle with Q) -->
+	{#if showQr}
+		<div class="fixed top-6 right-6 bg-white p-2 rounded-lg shadow-lg z-50 hidden md:block">
+			<QrCode url={siteUrl} size={80} />
+		</div>
+	{/if}
 
 	<!-- Slide counter (desktop only) -->
 	{#if isDesktop && totalSlides > 0}
