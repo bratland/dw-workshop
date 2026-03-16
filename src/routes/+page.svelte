@@ -57,6 +57,8 @@
 		);
 		for (const slide of slides) observer.observe(slide);
 
+		let isScrolling = false;
+
 		const handleKeydown = (e: KeyboardEvent) => {
 			if (!mediaQuery.matches) return;
 			const tag = (e.target as HTMLElement).tagName;
@@ -71,9 +73,26 @@
 
 			if (direction !== 0) {
 				e.preventDefault();
-				const next = currentSlide + direction;
+				if (isScrolling) return;
+
+				const scrollY = window.scrollY;
+				const viewportH = window.innerHeight;
+				const center = scrollY + viewportH / 2;
+
+				let closest = 0;
+				let closestDist = Infinity;
+				for (let i = 0; i < slides.length; i++) {
+					const rect = slides[i].getBoundingClientRect();
+					const slideCenter = scrollY + rect.top + rect.height / 2;
+					const dist = Math.abs(slideCenter - center);
+					if (dist < closestDist) { closestDist = dist; closest = i; }
+				}
+
+				const next = closest + direction;
 				if (next >= 0 && next < slides.length) {
+					isScrolling = true;
 					slides[next].scrollIntoView({ behavior: 'smooth' });
+					setTimeout(() => { isScrolling = false; }, 800);
 				}
 			}
 		};
@@ -116,49 +135,28 @@
 	</header>
 
 	<!-- Hero -->
-	<section data-slide class="hero relative overflow-hidden bg-navy text-white">
-		<div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 32px 32px;"></div>
-		<div class="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] rounded-full opacity-30 blur-[100px] animate-[hero-orb-1_8s_ease-in-out_infinite]" style="background: radial-gradient(circle, #184ace 0%, transparent 70%);"></div>
-		<div class="absolute bottom-[-30%] left-[-5%] w-[400px] h-[400px] rounded-full opacity-20 blur-[80px] animate-[hero-orb-2_10s_ease-in-out_infinite]" style="background: radial-gradient(circle, #d9ff42 0%, transparent 70%);"></div>
-		<div class="absolute top-[30%] left-[50%] w-[300px] h-[300px] rounded-full opacity-15 blur-[90px] animate-[hero-orb-3_12s_ease-in-out_infinite]" style="background: radial-gradient(circle, #184ace 0%, transparent 70%);"></div>
-		<div class="absolute top-[15%] right-[12%] w-16 h-16 border-2 border-blue-accent/30 rounded-lg rotate-12 animate-[hero-float_6s_ease-in-out_infinite]"></div>
-		<div class="absolute top-[60%] right-[25%] w-10 h-10 border-2 border-lime/20 rounded-full animate-[hero-float_8s_ease-in-out_infinite_1s]"></div>
-		<div class="absolute bottom-[20%] left-[8%] w-6 h-6 bg-blue-accent/20 rounded-sm rotate-45 animate-[hero-float_7s_ease-in-out_infinite_2s]"></div>
-		<div class="absolute top-[25%] left-[30%] w-3 h-3 bg-lime/30 rounded-full animate-[hero-float_5s_ease-in-out_infinite_0.5s]"></div>
-		<div class="absolute top-[45%] right-[8%] w-20 h-[2px] bg-gradient-to-r from-transparent via-blue-accent/40 to-transparent animate-[hero-float_9s_ease-in-out_infinite_3s]"></div>
-		<div class="absolute bottom-[35%] right-[40%] w-8 h-8 border border-white/10 rotate-45 animate-[hero-float_7s_ease-in-out_infinite_4s]"></div>
-
-		<div class="relative z-10 px-6 md:px-12 pt-20 pb-24 md:pt-32 md:pb-40 max-w-5xl">
-			<p class="text-blue-accent text-sm font-bold uppercase tracking-[2px] mb-6 animate-[hero-fade-up_0.6s_ease-out_both]">
-				{hero.label}
-			</p>
-			<h1 class="text-7xl md:text-8xl lg:text-9xl font-normal leading-[0.9] tracking-[-0.05em] mb-8 animate-[hero-fade-up_0.6s_ease-out_0.15s_both]">
+	<section data-slide class="hero bg-white md:min-h-dvh md:flex md:flex-col md:justify-center">
+		<div class="px-6 md:px-12 pt-16 pb-20 md:pt-28 md:pb-36 max-w-5xl">
+			<h1 class="text-6xl md:text-7xl lg:text-[72px] font-bold leading-[1.05] tracking-[-0.02em] mb-8 text-navy">
 				{hero.title1}<br />
-				<span class="relative inline-block mt-2">
-					<span class="relative z-10 bg-gradient-to-r from-white via-white to-blue-accent/80 bg-clip-text text-transparent">AI</span>
-					<span class="absolute inset-0 blur-[40px] bg-blue-accent/30 scale-150"></span>
-					<span class="absolute -bottom-3 left-0 w-full h-[3px] bg-gradient-to-r from-lime via-lime to-transparent rounded-full"></span>
-				</span>
+				<span class="italic text-blue-accent">AI</span>
 			</h1>
-			<p class="text-lg text-white/60 max-w-xl mt-10 leading-[1.55] animate-[hero-fade-up_0.6s_ease-out_0.3s_both]">
+			<p class="text-lg text-gray-text max-w-xl leading-[1.55]">
 				{hero.description}
 			</p>
-			<a href="#verktyg" class="inline-flex items-center gap-2 mt-10 bg-lime text-navy text-[13px] font-bold uppercase tracking-[1.5px] rounded-[3px] py-[13px] px-[28px] hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 animate-[hero-fade-up_0.6s_ease-out_0.45s_both]">
-				{hero.cta}
-				<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-			</a>
-		</div>
-		<div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
-			<svg class="relative block w-full h-[60px] md:h-[80px]" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 80L1200 80L1200 0L0 80Z" fill="white" /></svg>
+			<div class="flex flex-wrap gap-4 mt-10">
+				<a href="#verktyg" class="inline-flex items-center gap-2 bg-navy text-white text-[13px] font-bold uppercase tracking-[1.5px] rounded-full py-[13px] px-[28px] hover:bg-navy/90 transition-colors">
+					{hero.cta}
+					<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+				</a>
+				<a href="https://dailywins.se" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-navy/20 text-navy text-[13px] font-bold uppercase tracking-[1.5px] rounded-full py-[13px] px-[28px] hover:border-navy/40 transition-colors">
+					{lang === 'sv' ? 'Om Daily Wins' : 'About Daily Wins'}
+				</a>
+			</div>
 		</div>
 	</section>
 
 	<style>
-		@keyframes hero-orb-1 { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(-40px, 30px) scale(1.15); } }
-		@keyframes hero-orb-2 { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(30px, -40px) scale(1.1); } }
-		@keyframes hero-orb-3 { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(-20px, -30px) scale(1.2); } }
-		@keyframes hero-float { 0%, 100% { transform: translateY(0) rotate(var(--tw-rotate, 0deg)); } 50% { transform: translateY(-12px) rotate(var(--tw-rotate, 0deg)); } }
-		@keyframes hero-fade-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 		@media (min-width: 768px) {
 			:global([data-slide]:not(.hero)) {
 				min-height: 100dvh;
