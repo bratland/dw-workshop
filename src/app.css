@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+@font-face {
+	font-family: 'abc';
+	src: url('/fonts/ABCDiatypeVariable.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@theme {
+	--color-navy: #0e122f;
+	--color-blue-accent: #184ace;
+	--color-lime: #d9ff42;
+	--color-bg-warm: #faf9f5;
+	--color-section-warm: #dbe0d7;
+	--color-gray-text: #585656;
+	--color-muted: #656565;
+	--color-dark-footer: #192533;
+	--color-white: #ffffff;
+	--color-separator: #e6e6e6;
+	--font-sans: 'abc', sans-serif;
+}
