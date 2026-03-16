@@ -3,7 +3,7 @@
 	import QrCode from '$lib/components/QrCode.svelte';
 	import { t, toggleLang, getLang } from '$lib/i18n.svelte';
 
-	const siteUrl = 'https://workshop.dailywins.se';
+	const siteUrl = 'https://dw-workshop.vercel.app';
 
 	let currentSlide = $state(0);
 	let totalSlides = $state(0);
