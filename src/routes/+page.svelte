@@ -180,23 +180,23 @@
 			<p class="text-white/60 text-lg md:text-base leading-[1.55] mb-12 md:mb-6 max-w-2xl">{agenda.description}</p>
 			<div class="space-y-0">
 				<div class="flex gap-6 md:gap-8 pb-8 md:pb-4 border-b border-white/10">
-					<div class="shrink-0 w-24 md:w-28"><span class="text-2xl font-bold">17:00</span><p class="text-white/40 text-sm md:text-xs mt-1 md:mt-0">30 min</p></div>
+					<div class="shrink-0 w-24 md:w-28"><span class="text-2xl font-bold">17:15</span><p class="text-white/40 text-sm md:text-xs mt-1 md:mt-0">30 min</p></div>
 					<div><h3 class="text-xl md:text-lg font-bold mb-2 md:mb-0.5">{agenda.block1Title}</h3><p class="text-white/60 leading-[1.55] md:text-sm">{agenda.block1Desc}</p></div>
 				</div>
 				<div class="flex gap-6 md:gap-8 py-8 md:py-4 border-b border-white/10">
-					<div class="shrink-0 w-24 md:w-28"><span class="text-2xl font-bold">17:30</span><p class="text-white/40 text-sm md:text-xs mt-1 md:mt-0">30 min</p></div>
+					<div class="shrink-0 w-24 md:w-28"><span class="text-2xl font-bold">17:45</span><p class="text-white/40 text-sm md:text-xs mt-1 md:mt-0">30 min</p></div>
 					<div><h3 class="text-xl md:text-lg font-bold mb-2 md:mb-0.5">{agenda.block2Title}</h3><p class="text-white/60 leading-[1.55] md:text-sm">{agenda.block2Desc}</p></div>
 				</div>
 				<div class="flex gap-6 md:gap-8 py-8 md:py-4 border-b border-white/10">
-					<div class="shrink-0 w-24 md:w-28"><span class="text-2xl font-bold">18:00</span><p class="text-white/40 text-sm md:text-xs mt-1 md:mt-0">60 min</p></div>
+					<div class="shrink-0 w-24 md:w-28"><span class="text-2xl font-bold">18:15</span><p class="text-white/40 text-sm md:text-xs mt-1 md:mt-0">60 min</p></div>
 					<div><h3 class="text-xl md:text-lg font-bold mb-2 md:mb-0.5 flex items-center gap-2">{agenda.block4Title}<span class="bg-lime text-navy text-xs font-bold px-2 py-0.5 rounded-[3px] uppercase tracking-wider">{agenda.block4Badge}</span></h3><p class="text-white/60 leading-[1.55] md:text-sm">{agenda.block4Desc}</p></div>
 				</div>
 				<div class="flex gap-6 md:gap-8 py-8 md:py-4 border-b border-white/10">
-					<div class="shrink-0 w-24 md:w-28"><span class="text-2xl font-bold">19:00</span><p class="text-white/40 text-sm md:text-xs mt-1 md:mt-0">15 min</p></div>
+					<div class="shrink-0 w-24 md:w-28"><span class="text-2xl font-bold">19:15</span><p class="text-white/40 text-sm md:text-xs mt-1 md:mt-0">15 min</p></div>
 					<div><h3 class="text-xl md:text-lg font-bold mb-2 md:mb-0.5">{agenda.block5Title}</h3><p class="text-white/60 leading-[1.55] md:text-sm">{agenda.block5Desc}</p></div>
 				</div>
 				<div class="flex gap-6 md:gap-8 pt-8 md:pt-4">
-					<div class="shrink-0 w-24 md:w-28"><span class="text-2xl font-bold">19:15</span></div>
+					<div class="shrink-0 w-24 md:w-28"><span class="text-2xl font-bold">19:30</span></div>
 					<div><h3 class="text-xl md:text-lg font-bold mb-2 md:mb-0.5">{agenda.block6Title}</h3><p class="text-white/60 leading-[1.55] md:text-sm">{agenda.block6Desc}</p></div>
 				</div>
 			</div>
