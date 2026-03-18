@@ -16,10 +16,10 @@ export function toggleLang() {
 
 const translations = {
 	header: {
-		badge: { sv: 'Workshop — AI-verktyg', en: 'Workshop — AI Tools' }
+		badge: { sv: 'AI AW för bygg', en: 'AI AW for Construction' }
 	},
 	hero: {
-		label: { sv: 'Workshop — AI-verktyg', en: 'Workshop — AI Tools' },
+		label: { sv: 'AI AW för bygg — 18 mars 2026', en: 'AI AW for Construction — March 18, 2026' },
 		title1: { sv: 'Bygg med', en: 'Build with' },
 		description: {
 			sv: 'Resurser och verktyg från vår workshop. Allt du behöver för att komma igång med att bygga appar och lösningar med hjälp av AI.',
@@ -28,21 +28,21 @@ const translations = {
 		cta: { sv: 'Kom igång', en: 'Get started' }
 	},
 	agenda: {
-		label: { sv: 'Typiskt upplägg', en: 'Typical format' },
-		title: { sv: 'Workshop-agenda', en: 'Workshop agenda' },
+		label: { sv: 'AI AW för bygg', en: 'AI AW for Construction' },
+		title: { sv: 'Kvällens agenda', en: "Tonight's agenda" },
 		description: {
-			sv: 'Inspiration, live-demos och hands-on byggande. Du går härifrån med konkreta saker du kan börja göra annorlunda redan nästa vecka.',
-			en: 'Inspiration, live demos and hands-on building. You leave with concrete things you can start doing differently next week.'
+			sv: 'Kort introduktion om AI:s möjligheter inom bygg, följt av praktiskt arbete i mindre grupper där du bygger din första AI-applikation. Plus mingel med öl och tilltugg.',
+			en: 'Brief introduction to AI opportunities in construction, followed by hands-on work in small groups where you build your first AI application. Plus drinks and snacks.'
 		},
-		block1Title: { sv: 'Välkomna & introduktion', en: 'Welcome & introduction' },
+		block1Title: { sv: 'Mingel & välkomna', en: 'Drinks & welcome' },
 		block1Desc: {
-			sv: 'Förväntningar och en snabb överblick av vad AI kan göra idag. Var står vi — och vart är vi på väg?',
-			en: 'Expectations and a quick overview of what AI can do today. Where are we — and where are we headed?'
+			sv: 'Ta en öl, mingla och gör er hemma. Kort välkomsthälsning och intro till kvällen.',
+			en: 'Grab a beer, mingle and settle in. Brief welcome and intro to the evening.'
 		},
-		block2Title: { sv: 'Introduktion & live-demos', en: 'Introduction & live demos' },
+		block2Title: { sv: 'AI:s möjligheter inom bygg', en: 'AI opportunities in construction' },
 		block2Desc: {
-			sv: 'Välkomna, förväntningar och en överblick av vad AI kan göra idag. Sedan visar vi hur verktygen fungerar i praktiken — från idé till fungerande app på minuter, live.',
-			en: 'Welcome, expectations and an overview of what AI can do today. Then we show how the tools work in practice — from idea to working app in minutes, live.'
+			sv: 'Vad kan AI göra för byggindustrin idag? Live-demos av verktyg som bygger appar, automatiserar processer och löser vardagsproblem — från idé till fungerande lösning på minuter.',
+			en: 'What can AI do for construction today? Live demos of tools that build apps, automate processes and solve everyday problems — from idea to working solution in minutes.'
 		},
 		block3Title: { sv: 'Idéworkshop', en: 'Idea workshop' },
 		block3Desc: {
@@ -52,20 +52,20 @@ const translations = {
 		block4Title: { sv: 'Hands-on: Bygg din lösning', en: 'Hands-on: Build your solution' },
 		block4Badge: { sv: 'Huvudpass', en: 'Main session' },
 		block4Desc: {
-			sv: 'Vad vill du bygga? Vi hittar din idé, väljer verktyg (Lovable, Replit) och bygger — med stöd av en AI-coach.',
-			en: 'What do you want to build? We find your idea, pick a tool (Lovable, Replit) and build — with support from an AI coach.'
+			sv: 'I mindre grupper bygger du din första AI-applikation. Välj ett problem från din vardag inom bygg — vi hjälper dig välja verktyg och coachar dig hela vägen.',
+			en: 'In small groups you build your first AI application. Pick a problem from your daily work in construction — we help you choose tools and coach you all the way.'
 		},
 		block5Title: { sv: 'Visa & berätta', en: 'Show & tell' },
 		block5Desc: {
 			sv: 'Deltagarna visar vad de byggt. Vi firar framstegen och inspirerar varandra.',
 			en: 'Participants show what they built. We celebrate progress and inspire each other.'
 		},
-		block6Title: { sv: 'Nästa steg & avslut', en: 'Next steps & wrap-up' },
+		block6Title: { sv: 'Fri mingel', en: 'Open networking' },
 		block6Desc: {
-			sv: 'Konkreta rekommendationer och tillgång till den här sidan med alla resurser och verktyg.',
-			en: 'Concrete recommendations and access to this page with all resources and tools.'
+			sv: 'Kvällen fortsätter med öl, tilltugg och samtal. Ställ frågor, diskutera idéer och nätverka.',
+			en: 'The evening continues with drinks, snacks and conversation. Ask questions, discuss ideas and network.'
 		},
-		hours: { sv: '2,5 timmar', en: '2.5 hours' },
+		hours: { sv: '2 timmar + mingel', en: '2 hours + networking' },
 		participants: { sv: 'Max 15–20 deltagare', en: 'Max 15–20 participants' },
 		noTechRequired: { sv: 'Ingen teknisk bakgrund krävs', en: 'No technical background required' }
 	},
