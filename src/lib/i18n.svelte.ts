@@ -16,57 +16,52 @@ export function toggleLang() {
 
 const translations = {
 	header: {
-		badge: { sv: 'AI AW för bygg', en: 'AI AW for Construction' }
+		badge: { sv: 'AI för Sälj', en: 'AI for Sales' }
 	},
 	hero: {
-		label: { sv: 'AI AW för bygg — 18 mars 2026', en: 'AI AW for Construction — March 18, 2026' },
-		title1: { sv: 'Bygg med', en: 'Build with' },
+		label: { sv: 'AI för Sälj — 9 april 2026', en: 'AI for Sales — April 9, 2026' },
+		title1: { sv: 'Sälj med', en: 'Sell with' },
 		description: {
-			sv: 'Resurser och verktyg från vår workshop. Allt du behöver för att komma igång med att bygga appar och lösningar med hjälp av AI.',
-			en: 'Resources and tools from our workshop. Everything you need to start building apps and solutions with AI.'
+			sv: 'Resurser och verktyg från vår workshop. Allt du behöver för att börja använda AI i din säljprocess — från lead-prospektering till CRM-automation.',
+			en: 'Resources and tools from our workshop. Everything you need to start using AI in your sales process — from lead prospecting to CRM automation.'
 		},
 		cta: { sv: 'Kom igång', en: 'Get started' }
 	},
 	agenda: {
-		label: { sv: 'AI AW för bygg', en: 'AI AW for Construction' },
+		label: { sv: 'AI för Sälj', en: 'AI for Sales' },
 		title: { sv: 'Kvällens agenda', en: "Tonight's agenda" },
 		description: {
-			sv: 'Kort introduktion om AI:s möjligheter inom bygg, följt av praktiskt arbete i mindre grupper där du bygger din första AI-applikation. Plus mingel med öl och tilltugg.',
-			en: 'Brief introduction to AI opportunities in construction, followed by hands-on work in small groups where you build your first AI application. Plus drinks and snacks.'
+			sv: 'Kort orientering om hur AI förändrar B2B-försäljning, följt av praktiskt arbete där du testar AI-verktyg direkt i din egen säljprocess.',
+			en: 'A brief orientation on how AI is changing B2B sales, followed by hands-on work where you test AI tools directly in your own sales process.'
 		},
-		block1Title: { sv: 'Mingel & välkomna', en: 'Drinks & welcome' },
+		block1Title: { sv: 'Mingel', en: 'Mingling' },
 		block1Desc: {
-			sv: 'Ta en öl, mingla och gör er hemma. Kort välkomsthälsning och intro till kvällen.',
-			en: 'Grab a beer, mingle and settle in. Brief welcome and intro to the evening.'
+			sv: 'Anländ i lugn och ro, ta en kaffe och hälsa på de andra innan vi drar igång.',
+			en: 'Arrive at your own pace, grab a coffee and meet the others before we kick off.'
 		},
-		block2Title: { sv: 'AI:s möjligheter inom bygg', en: 'AI opportunities in construction' },
+		block2Title: { sv: 'Intro: 5 sätt AI förändrar sälj', en: 'Intro: 5 ways AI is changing sales' },
 		block2Desc: {
-			sv: 'Vad kan AI göra för byggindustrin idag? Live-demos av verktyg som bygger appar, automatiserar processer och löser vardagsproblem — från idé till fungerande lösning på minuter.',
-			en: 'What can AI do for construction today? Live demos of tools that build apps, automate processes and solve everyday problems — from idea to working solution in minutes.'
+			sv: 'Kort välkomsthälsning följt av live-demos av hur AI hittar leads, skriver outreach som faktiskt öppnas, förbereder möten, bygger säljmaterial och tar bort CRM-administrationen. Från idé till fungerande flöde på minuter.',
+			en: 'Brief welcome followed by live demos of how AI finds leads, writes outreach that actually opens, prepares meetings, builds sales materials and removes CRM admin. From idea to working workflow in minutes.'
 		},
-		block3Title: { sv: 'Idéworkshop', en: 'Idea workshop' },
-		block3Desc: {
-			sv: 'Vad vill du bygga? Vi hittar konkreta utmaningar i din vardag som AI kan lösa.',
-			en: 'What do you want to build? We brainstorm and identify concrete challenges in your daily work that AI can solve.'
-		},
-		block4Title: { sv: 'Hands-on: Bygg din lösning', en: 'Hands-on: Build your solution' },
+		block4Title: { sv: 'Hands-on: testa själv', en: 'Hands-on: try it yourself' },
 		block4Badge: { sv: 'Huvudpass', en: 'Main session' },
 		block4Desc: {
-			sv: 'I mindre grupper bygger du din första AI-applikation. Välj ett problem från din vardag inom bygg — vi hjälper dig välja verktyg och coachar dig hela vägen.',
-			en: 'In small groups you build your first AI application. Pick a problem from your daily work in construction — we help you choose tools and coach you all the way.'
+			sv: 'Välj en av utmaningarna från din egen säljvardag och testa AI-verktyg på riktigt — med dina kunder, din bransch och dina prompts. Vi coachar dig hela vägen.',
+			en: 'Pick one of the challenges from your own sales work and test AI tools for real — with your customers, your industry and your prompts. We coach you all the way.'
 		},
 		block5Title: { sv: 'Visa & berätta', en: 'Show & tell' },
 		block5Desc: {
-			sv: 'Deltagarna visar vad de byggt. Vi firar framstegen och inspirerar varandra.',
-			en: 'Participants show what they built. We celebrate progress and inspire each other.'
+			sv: 'Deltagarna delar vad de upptäckt och testat. Vi firar framstegen och inspirerar varandra.',
+			en: 'Participants share what they discovered and tested. We celebrate progress and inspire each other.'
 		},
-		block6Title: { sv: 'Fri mingel', en: 'Open networking' },
+		block6Title: { sv: 'Avslut & nätverka', en: 'Wrap-up & network' },
 		block6Desc: {
-			sv: 'Kvällen fortsätter med öl, tilltugg och samtal. Ställ frågor, diskutera idéer och nätverka.',
-			en: 'The evening continues with drinks, snacks and conversation. Ask questions, discuss ideas and network.'
+			sv: 'Kvällen avslutas med samtal och nätverkande. Ställ frågor, diskutera idéer och ta med dig konkreta nästa steg.',
+			en: 'The evening wraps up with conversation and networking. Ask questions, discuss ideas and take concrete next steps with you.'
 		},
-		hours: { sv: '2 timmar + mingel', en: '2 hours + networking' },
-		participants: { sv: 'Max 15–20 deltagare', en: 'Max 15–20 participants' },
+		hours: { sv: '2,5 timmar', en: '2.5 hours' },
+		participants: { sv: 'Max 25 deltagare', en: 'Max 25 participants' },
 		noTechRequired: { sv: 'Ingen teknisk bakgrund krävs', en: 'No technical background required' }
 	},
 	about: {
@@ -100,8 +95,8 @@ const translations = {
 			en: 'The moment that changes everything'
 		},
 		momentDesc: {
-			sv: 'I våra workshops bygger vanliga medarbetare sina egna verktyg med AI — med sina egna problem. Det lyser i ögonen på människor. De går från "jag är inte en teknisk person" till "jag kan bygga lösningar". Det är en identitetsförskjutning — den enda typen av förändring som faktiskt håller.',
-			en: 'In our workshops, regular employees build their own tools with AI — solving their own problems. People\'s eyes light up. They go from "I\'m not a technical person" to "I can build solutions." It\'s an identity shift — the only type of change that actually sticks.'
+			sv: 'I våra workshops testar säljare AI-flöden i sin egen pipeline — med sina egna kunder och utmaningar. Det lyser i ögonen på människor. De går från "jag har knappt använt ChatGPT" till "jag har AI i min säljprocess". Det är en identitetsförskjutning — den enda typen av förändring som faktiskt håller.',
+			en: 'In our workshops, salespeople test AI workflows in their own pipeline — with their own customers and challenges. People\'s eyes light up. They go from "I\'ve barely used ChatGPT" to "I have AI in my sales process." It\'s an identity shift — the only type of change that actually sticks.'
 		},
 		quote: {
 			sv: '"Det svåraste att begripa är hur enkelt det faktiskt är. Så länge du inte har upplevt det själv kommer du att underskatta det."',
@@ -119,15 +114,15 @@ const translations = {
 			sv: 'Workshopen handlar inte om att lyssna — utan om att göra. När du går härifrån har du:',
 			en: 'This workshop is not about listening — it\'s about doing. When you leave, you will have:'
 		},
-		goal1Title: { sv: 'Byggt en egen app', en: 'Built your own app' },
+		goal1Title: { sv: 'Ett AI-flöde du kan köra imorgon', en: 'An AI workflow you can run tomorrow' },
 		goal1Desc: {
-			sv: 'En fungerande prototyp som löser ett verkligt problem i din vardag. Inte en övning — något du faktiskt kan använda.',
-			en: 'A working prototype that solves a real problem in your daily work. Not an exercise — something you can actually use.'
+			sv: 'Ett konkret AI-flöde i din säljprocess — testat på riktiga kunder och egna prompts. Inte en övning, utan något du använder på måndag.',
+			en: 'A concrete AI workflow in your sales process — tested on real customers and your own prompts. Not an exercise, but something you use on Monday.'
 		},
 		goal2Title: { sv: 'Förstått vad AI kan idag', en: 'Understood what AI can do today' },
 		goal2Desc: {
-			sv: 'Inte teori, utan hands-on förståelse. Du har sett och upplevt skillnaden mellan att fråga AI och att bygga med AI.',
-			en: 'Not theory, but hands-on understanding. You\'ve seen and experienced the difference between asking AI and building with AI.'
+			sv: 'Inte teori, utan hands-on förståelse av var AI faktiskt gör skillnad i sälj — och var den inte gör det.',
+			en: 'Not theory, but hands-on understanding of where AI actually makes a difference in sales — and where it doesn\'t.'
 		},
 		goal3Title: { sv: 'Verktygslådan klar', en: 'Toolbox ready' },
 		goal3Desc: {
@@ -136,8 +131,8 @@ const translations = {
 		},
 		goal4Title: { sv: 'Ny bild av dig själv', en: 'New self-image' },
 		goal4Desc: {
-			sv: 'Du har gått från "jag är inte en teknisk person" till "jag kan bygga lösningar". Det är den förändring som håller.',
-			en: 'You\'ve gone from "I\'m not a technical person" to "I can build solutions." That\'s the change that sticks.'
+			sv: 'Du har gått från "jag har knappt använt ChatGPT" till "jag har AI i min säljprocess". Det är den förändring som håller.',
+			en: 'You\'ve gone from "I\'ve barely used ChatGPT" to "I have AI in my sales process." That\'s the change that sticks.'
 		}
 	},
 	toolsIntro: {
@@ -208,6 +203,33 @@ const translations = {
 		referral: {
 			sv: 'Använd vår länk — du får 10 extra credits vid registrering.',
 			en: 'Use our link — you get 10 extra credits when signing up.'
+		},
+		promoBadge: { sv: 'Endast för workshopdeltagare', en: 'Workshop attendees only' },
+		promoTitle: { sv: 'Gratis Pro Plan 1 under workshopen', en: 'Free Pro Plan 1 during the workshop' },
+		promoDescription: {
+			sv: 'Lovable bjuder alla deltagare på Pro Plan 1 (100 credits, värde $25). Alla Pro-funktioner upplåsta.',
+			en: 'Lovable is giving all attendees Pro Plan 1 (100 credits, $25 value). All Pro features unlocked.'
+		},
+		promoCodeLabel: { sv: 'Rabattkod', en: 'Promo code' },
+		promoStep1: {
+			sv: 'Gå till <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" class="text-blue-accent underline">lovable.dev</a> och logga in (eller skapa konto).',
+			en: 'Go to <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" class="text-blue-accent underline">lovable.dev</a> and sign in (or create an account).'
+		},
+		promoStep2: {
+			sv: 'Öppna Settings → Plans & Credits och välj Pro Plan 1 (100 credits). Välj månadsplan.',
+			en: 'Open Settings → Plans & Credits and select Pro Plan 1 (100 credits). Choose the monthly plan.'
+		},
+		promoStep3: {
+			sv: 'Ange koden i kassan. Du kan bli ombedd att fylla i betaluppgifter — du kan avaktivera prenumerationen direkt efter att den aktiverats.',
+			en: 'Enter the code at checkout. You may be asked for payment details — you can cancel the plan as soon as it is activated.'
+		},
+		promoExistingUser: {
+			sv: 'Har du redan ett betalkonto? Skapa en ny workspace för att lösa in koden.',
+			en: 'Already have a paid account? Create a new workspace to redeem the code.'
+		},
+		promoValidity: {
+			sv: 'Koden måste lösas in under eventet och får inte delas utanför workshopen.',
+			en: 'The code must be redeemed during the event and must not be shared outside the workshop.'
 		}
 	},
 	replit: {

@@ -180,15 +180,15 @@
 			<p class="text-white/60 text-lg md:text-base leading-[1.55] mb-12 md:mb-6 max-w-2xl">{agenda.description}</p>
 			<div class="space-y-0">
 				<div class="flex gap-6 md:gap-8 pb-8 md:pb-4 border-b border-white/10">
-					<div class="shrink-0 w-24 md:w-28"><span class="text-2xl font-bold">17:15</span><p class="text-white/40 text-sm md:text-xs mt-1 md:mt-0">30 min</p></div>
+					<div class="shrink-0 w-24 md:w-28"><span class="text-2xl font-bold">17:00</span><p class="text-white/40 text-sm md:text-xs mt-1 md:mt-0">15 min</p></div>
 					<div><h3 class="text-xl md:text-lg font-bold mb-2 md:mb-0.5">{agenda.block1Title}</h3><p class="text-white/60 leading-[1.55] md:text-sm">{agenda.block1Desc}</p></div>
 				</div>
 				<div class="flex gap-6 md:gap-8 py-8 md:py-4 border-b border-white/10">
-					<div class="shrink-0 w-24 md:w-28"><span class="text-2xl font-bold">17:45</span><p class="text-white/40 text-sm md:text-xs mt-1 md:mt-0">30 min</p></div>
+					<div class="shrink-0 w-24 md:w-28"><span class="text-2xl font-bold">17:15</span><p class="text-white/40 text-sm md:text-xs mt-1 md:mt-0">45 min</p></div>
 					<div><h3 class="text-xl md:text-lg font-bold mb-2 md:mb-0.5">{agenda.block2Title}</h3><p class="text-white/60 leading-[1.55] md:text-sm">{agenda.block2Desc}</p></div>
 				</div>
 				<div class="flex gap-6 md:gap-8 py-8 md:py-4 border-b border-white/10">
-					<div class="shrink-0 w-24 md:w-28"><span class="text-2xl font-bold">18:15</span><p class="text-white/40 text-sm md:text-xs mt-1 md:mt-0">60 min</p></div>
+					<div class="shrink-0 w-24 md:w-28"><span class="text-2xl font-bold">18:00</span><p class="text-white/40 text-sm md:text-xs mt-1 md:mt-0">75 min</p></div>
 					<div><h3 class="text-xl md:text-lg font-bold mb-2 md:mb-0.5 flex items-center gap-2">{agenda.block4Title}<span class="bg-lime text-navy text-xs font-bold px-2 py-0.5 rounded-[3px] uppercase tracking-wider">{agenda.block4Badge}</span></h3><p class="text-white/60 leading-[1.55] md:text-sm">{agenda.block4Desc}</p></div>
 				</div>
 				<div class="flex gap-6 md:gap-8 py-8 md:py-4 border-b border-white/10">
@@ -322,6 +322,21 @@
 				<span class="bg-navy/5 text-navy text-sm px-4 py-1.5 rounded-full">{lovable.tag1}</span>
 				<span class="bg-navy/5 text-navy text-sm px-4 py-1.5 rounded-full">{lovable.tag2}</span>
 				<span class="bg-navy/5 text-navy text-sm px-4 py-1.5 rounded-full">{lovable.tag3}</span>
+			</div>
+			<div class="bg-navy text-white rounded-lg p-6 md:p-8 mb-6 relative overflow-hidden">
+				<span class="absolute top-4 right-4 bg-lime text-navy text-[10px] font-bold px-2 py-0.5 rounded-[3px] uppercase tracking-wider">{lovable.promoBadge}</span>
+				<h4 class="text-2xl md:text-3xl font-bold mb-2 pr-32">{lovable.promoTitle}</h4>
+				<p class="text-white/80 leading-[1.55] mb-5">{lovable.promoDescription}</p>
+				<div class="bg-white/10 border border-white/20 rounded-lg p-4 mb-5">
+					<div class="text-[11px] uppercase tracking-[1.5px] text-white/60 mb-1">{lovable.promoCodeLabel}</div>
+					<div class="font-mono text-2xl md:text-3xl font-bold tracking-[2px] select-all">COMM-AIFO-UCKV</div>
+				</div>
+				<ol class="space-y-2 text-white/85 text-sm leading-[1.55] mb-4">
+					<li class="flex gap-3"><span class="text-lime font-bold">1.</span> {@html lovable.promoStep1}</li>
+					<li class="flex gap-3"><span class="text-lime font-bold">2.</span> {lovable.promoStep2}</li>
+					<li class="flex gap-3"><span class="text-lime font-bold">3.</span> {lovable.promoStep3}</li>
+				</ol>
+				<p class="text-xs text-white/60 border-t border-white/10 pt-3 mt-3"><strong class="text-white/80">{lovable.promoExistingUser}</strong> {lovable.promoValidity}</p>
 			</div>
 			<div class="bg-bg-warm rounded-lg p-6 mb-6">
 				<h4 class="font-bold mb-3">{lovable.stepsTitle}</h4>
