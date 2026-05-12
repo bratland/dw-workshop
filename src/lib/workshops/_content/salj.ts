@@ -624,6 +624,24 @@ export const saljTranslations: WorkshopTranslations = {
 			en: "Use Git or the tool's built-in version control. It's easy to accidentally overwrite something that worked."
 		}
 	},
+	tillvaxtGame: {
+		eyebrow: { sv: 'Bonus — tips från Anders', en: 'Bonus — tip from Anders' },
+		title: { sv: 'Tillväxt-spelet', en: 'The Growth Game' },
+		tagline: {
+			sv: 'Hur faktabaserad är din magkänsla?',
+			en: 'How fact-based is your gut feeling?'
+		},
+		description: {
+			sv: 'Tre frågor på tre minuter. Du läser ett verkligt företagsscenario, gissar med magkänslan, väljer hur du skulle verifiera svaret i ditt eget bolag — och ser sedan facit jämfört med andra spelare.',
+			en: 'Three questions in three minutes. You read a real business scenario, guess intuitively, choose how you would verify the answer in your own company — then see the actual outcome compared to other players.'
+		},
+		method: {
+			sv: 'Bygger på Johan Skölds faktabaserade tillväxtmetod. Spelet tränar dig att gå från magkänsla → hypotes → verifierad fakta.',
+			en: "Built on Johan Sköld's fact-based growth method. The game trains you to move from gut feeling → hypothesis → verified fact."
+		},
+		cta: { sv: 'Spela tre demo-frågor', en: 'Play three demo questions' },
+		ctaNote: { sv: 'Ingen registrering — öppnas i nytt fönster', en: 'No sign-up — opens in a new tab' }
+	},
 	blackBelt: {
 		label: { sv: 'Nästa steg', en: 'Next step' },
 		title: {

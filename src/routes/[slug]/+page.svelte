@@ -45,6 +45,7 @@
 	const composio = $derived(t('composio'));
 	const fortnox = $derived(t('fortnox'));
 	const tips = $derived(t('tips'));
+	const tillvaxtGame = $derived(t('tillvaxtGame'));
 	const blackBelt = $derived(t('blackBelt'));
 	const qr = $derived(t('qr'));
 	const footer = $derived(t('footer'));
@@ -931,6 +932,26 @@
 				<div class="flex gap-5"><span class="text-5xl font-bold text-navy/15 leading-none">2</span><div><h3 class="font-bold text-xl mb-2">{tips.tip2Title}</h3><p class="text-gray-text text-lg leading-[1.55]">{tips.tip2Desc}</p></div></div>
 				<div class="flex gap-5"><span class="text-5xl font-bold text-navy/15 leading-none">3</span><div><h3 class="font-bold text-xl mb-2">{tips.tip3Title}</h3><p class="text-gray-text text-lg leading-[1.55]">{tips.tip3Desc}</p></div></div>
 				<div class="flex gap-5"><span class="text-5xl font-bold text-navy/15 leading-none">4</span><div><h3 class="font-bold text-xl mb-2">{tips.tip4Title}</h3><p class="text-gray-text text-lg leading-[1.55]">{tips.tip4Desc}</p></div></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Tillväxt-spelet -->
+	<section data-slide class="bg-bg-warm px-6 md:px-12 py-20">
+		<div class="max-w-4xl mx-auto">
+			<p class="text-blue-accent text-sm font-bold uppercase tracking-[2px] mb-4">{tillvaxtGame.eyebrow}</p>
+			<h2 class="text-5xl md:text-6xl font-bold mb-4 tracking-tight">{tillvaxtGame.title}</h2>
+			<p class="text-2xl md:text-3xl text-navy/70 leading-[1.3] mb-8 italic">{tillvaxtGame.tagline}</p>
+			<p class="text-gray-text text-lg leading-[1.55] mb-6 max-w-3xl">{tillvaxtGame.description}</p>
+			<p class="text-gray-text/80 text-base leading-[1.55] mb-10 max-w-3xl">{tillvaxtGame.method}</p>
+			<div class="flex flex-col md:flex-row md:items-center gap-4">
+				<a
+					href="https://skold.pages.dev/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="inline-block bg-navy text-white uppercase text-[13px] font-bold tracking-[1.5px] rounded-[3px] py-[14px] px-[28px] hover:opacity-90 transition-opacity self-start"
+				>{tillvaxtGame.cta} →</a>
+				<span class="text-sm text-muted">{tillvaxtGame.ctaNote}</span>
 			</div>
 		</div>
 	</section>
