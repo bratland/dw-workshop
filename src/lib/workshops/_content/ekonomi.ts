@@ -143,5 +143,9 @@ export const ekonomiTranslations: WorkshopTranslations = {
 			sv: 'Här är de AI-verktyg vi använder och rekommenderar för ekonomifunktionen. Fortnox MCP är vår egen brygga till ditt bokföringssystem — börja där om du redan kör Fortnox.',
 			en: 'Here are the AI tools we use and recommend for the finance function. Fortnox MCP is our own bridge to your accounting system — start there if you already run Fortnox.'
 		}
+	},
+	lovable: {
+		...saljTranslations.lovable,
+		promoCode: { sv: 'COMM-AI-J3UV', en: 'COMM-AI-J3UV' }
 	}
 };

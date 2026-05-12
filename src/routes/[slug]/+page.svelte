@@ -342,7 +342,7 @@
 				<p class="text-white/80 leading-[1.55] mb-5">{lovable.promoDescription}</p>
 				<div class="bg-white/10 border border-white/20 rounded-lg p-4 mb-5">
 					<div class="text-[11px] uppercase tracking-[1.5px] text-white/60 mb-1">{lovable.promoCodeLabel}</div>
-					<div class="font-mono text-2xl md:text-3xl font-bold tracking-[2px] select-all">COMM-AIFO-UCKV</div>
+					<div class="font-mono text-2xl md:text-3xl font-bold tracking-[2px] select-all">{lovable.promoCode}</div>
 				</div>
 				<ol class="space-y-2 text-white/85 text-sm leading-[1.55] mb-4">
 					<li class="flex gap-3"><span class="text-lime font-bold">1.</span> {@html lovable.promoStep1}</li>

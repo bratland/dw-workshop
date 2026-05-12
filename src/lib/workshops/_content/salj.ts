@@ -197,6 +197,7 @@ export const saljTranslations: WorkshopTranslations = {
 			en: 'Lovable is giving all attendees Pro Plan 1 (100 credits, $25 value). All Pro features unlocked.'
 		},
 		promoCodeLabel: { sv: 'Rabattkod', en: 'Promo code' },
+		promoCode: { sv: 'COMM-AIFO-UCKV', en: 'COMM-AIFO-UCKV' },
 		promoStep1: {
 			sv: 'Gå till <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" class="text-blue-accent underline">lovable.dev</a> och logga in (eller skapa konto).',
 			en: 'Go to <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" class="text-blue-accent underline">lovable.dev</a> and sign in (or create an account).'
