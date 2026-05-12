@@ -45,9 +45,38 @@
 	const composio = $derived(t('composio'));
 	const fortnox = $derived(t('fortnox'));
 	const tips = $derived(t('tips'));
+	const blackBelt = $derived(t('blackBelt'));
 	const qr = $derived(t('qr'));
 	const footer = $derived(t('footer'));
 	const lang = $derived(getLang());
+
+	const PRICE_SINGEL = 4900;
+	const PRICE_KVARTAL = 19800;
+	const PRICE_TIOPACK = 29000;
+	const BOOKING_URL = 'https://rf-dailywinsab.pipedrive.com/scheduler/PPpMkjub/ai-black-belt';
+
+	const tier = $derived(data.discountTier);
+	const singelPrice = $derived(applyDiscount(PRICE_SINGEL, tier));
+	const kvartalPrice = $derived(applyDiscount(PRICE_KVARTAL, tier));
+	const tiopackPrice = $derived(applyDiscount(PRICE_TIOPACK, tier));
+
+	function applyDiscount(amount: number, t: number): number {
+		return Math.round(amount * (1 - t / 100));
+	}
+
+	function formatKr(n: number): string {
+		return new Intl.NumberFormat('sv-SE').format(n) + ' kr';
+	}
+
+	function trackBookingClick() {
+		const w = window as unknown as { gtag?: (...args: unknown[]) => void };
+		if (typeof w.gtag === 'function') {
+			w.gtag('event', 'book_intro_call_click', {
+				workshop: data.config.slug,
+				discount_pct: tier
+			});
+		}
+	}
 
 	onMount(() => {
 		const slides = Array.from(document.querySelectorAll<HTMLElement>('[data-slide]'));
@@ -313,6 +342,150 @@
 		</div>
 	</section>
 
+	<!-- AI-Black Belt -->
+	<section data-slide class="bg-navy text-white px-6 md:px-12 py-20">
+		<div class="max-w-6xl mx-auto">
+			<p class="text-sm uppercase tracking-[2px] text-lime mb-4 font-bold">{blackBelt.label}</p>
+			<h2 class="text-5xl md:text-6xl font-bold mb-6 tracking-tight">{blackBelt.title}</h2>
+			<p class="text-white/80 text-lg leading-[1.55] mb-8 max-w-3xl">{blackBelt.lead}</p>
+
+			<div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-12 text-sm">
+				<span class="uppercase tracking-[1.5px] text-white/50">{blackBelt.formatLabel}</span>
+				<span class="text-white/90">{blackBelt.formatValue}</span>
+			</div>
+
+			<!-- Testimonials -->
+			<div class="grid md:grid-cols-2 gap-8 mb-16">
+				<blockquote class="border-l-2 border-lime pl-6">
+					<p class="text-white/90 italic leading-[1.65] mb-3">{blackBelt.testimonial1Quote}</p>
+					<footer class="text-sm text-white/60 not-italic">— {blackBelt.testimonial1Author}</footer>
+				</blockquote>
+				<blockquote class="border-l-2 border-lime pl-6">
+					<p class="text-white/90 italic leading-[1.65] mb-3">{blackBelt.testimonial2Quote}</p>
+					<footer class="text-sm text-white/60 not-italic">— {blackBelt.testimonial2Author}</footer>
+				</blockquote>
+			</div>
+
+			<!-- 4 steg -->
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+				<div>
+					<span class="text-3xl font-bold text-lime/60">1</span>
+					<h3 class="font-bold text-lg mt-2 mb-1">{blackBelt.step1Title}</h3>
+					<p class="text-white/60 text-sm leading-[1.5]">{blackBelt.step1Desc}</p>
+				</div>
+				<div>
+					<span class="text-3xl font-bold text-lime/60">2</span>
+					<h3 class="font-bold text-lg mt-2 mb-1">{blackBelt.step2Title}</h3>
+					<p class="text-white/60 text-sm leading-[1.5]">{blackBelt.step2Desc}</p>
+				</div>
+				<div>
+					<span class="text-3xl font-bold text-lime/60">3</span>
+					<h3 class="font-bold text-lg mt-2 mb-1">{blackBelt.step3Title}</h3>
+					<p class="text-white/60 text-sm leading-[1.5]">{blackBelt.step3Desc}</p>
+				</div>
+				<div>
+					<span class="text-3xl font-bold text-lime/60">4</span>
+					<h3 class="font-bold text-lg mt-2 mb-1">{blackBelt.step4Title}</h3>
+					<p class="text-white/60 text-sm leading-[1.5]">{blackBelt.step4Desc}</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- AI-Black Belt — Paket / Offer (egen slide för att korten ska få sin egen frame) -->
+	<section data-slide class="bg-navy text-white px-6 md:px-12 py-20 md:min-h-dvh md:flex md:flex-col md:justify-center">
+		<div class="max-w-6xl mx-auto w-full">
+			<p class="text-sm uppercase tracking-[2px] text-lime mb-8 font-bold">{blackBelt.offerLabel}</p>
+
+			<!-- Kampanjbanner -->
+			{#if tier > 0}
+				<div class="bg-lime text-navy text-center font-bold uppercase tracking-[1.5px] text-sm py-4 px-6 mb-8 rounded">
+					{tier === 30 ? blackBelt.campaignBanner30 : blackBelt.campaignBanner10}
+				</div>
+			{/if}
+
+			<!-- 3 pris-kort -->
+			<div class="grid md:grid-cols-3 gap-6 mb-12 items-stretch">
+				<!-- Singel -->
+				<div class="border border-white/20 rounded-lg p-8 flex flex-col">
+					<p class="text-xs uppercase tracking-[1.5px] text-white/50 mb-4 font-bold">{blackBelt.card1Eyebrow}</p>
+					<h3 class="text-2xl font-bold mb-1">{blackBelt.card1Title}</h3>
+					<p class="text-sm text-white/60 mb-6">{blackBelt.card1Unit}</p>
+
+					{#if tier > 0}
+						<p class="text-sm text-white/50 line-through mb-1">{blackBelt.originalLabel} {formatKr(PRICE_SINGEL)}</p>
+						<p class="text-4xl font-bold mb-2">{formatKr(singelPrice)}</p>
+						<p class="text-sm text-lime font-bold mb-6">{blackBelt.saveLabel} {formatKr(PRICE_SINGEL - singelPrice)}</p>
+					{:else}
+						<p class="text-4xl font-bold mb-6">{formatKr(PRICE_SINGEL)}</p>
+					{/if}
+
+					<p class="text-white/70 leading-[1.55] text-sm">{blackBelt.card1Desc}</p>
+				</div>
+
+				<!-- Kvartal (featured) -->
+				<div class="border-2 border-lime rounded-lg p-8 flex flex-col md:scale-[1.03] bg-white/[0.02]">
+					<p class="text-xs uppercase tracking-[1.5px] text-lime mb-4 font-bold">{blackBelt.card2Eyebrow}</p>
+					<h3 class="text-2xl font-bold mb-1">{blackBelt.card2Title}</h3>
+					<p class="text-sm text-white/60 mb-6">{blackBelt.card2Unit}</p>
+
+					{#if tier > 0}
+						<p class="text-sm text-white/50 line-through mb-1">{blackBelt.originalLabel} {formatKr(PRICE_KVARTAL)}</p>
+						<p class="text-4xl font-bold mb-2">{formatKr(kvartalPrice)}</p>
+						<p class="text-sm text-lime font-bold mb-6">{blackBelt.saveLabel} {formatKr(PRICE_KVARTAL - kvartalPrice)}</p>
+					{:else}
+						<p class="text-4xl font-bold mb-2">{formatKr(PRICE_KVARTAL)}</p>
+						<p class="text-sm text-lime font-bold mb-6">{blackBelt.card2Badge}</p>
+					{/if}
+
+					<p class="text-white/70 leading-[1.55] text-sm">{blackBelt.card2Desc}</p>
+				</div>
+
+				<!-- Tiopack -->
+				<div class="border border-white/40 rounded-lg p-8 flex flex-col">
+					<p class="text-xs uppercase tracking-[1.5px] text-white/70 mb-4 font-bold">{blackBelt.card3Eyebrow}</p>
+					<h3 class="text-2xl font-bold mb-1">{blackBelt.card3Title}</h3>
+					<p class="text-sm text-white/60 mb-6">{blackBelt.card3Unit}</p>
+
+					{#if tier > 0}
+						<p class="text-sm text-white/50 line-through mb-1">{blackBelt.originalLabel} {formatKr(PRICE_TIOPACK)}</p>
+						<p class="text-4xl font-bold mb-2">{formatKr(tiopackPrice)}</p>
+						<p class="text-sm text-lime font-bold mb-6">{blackBelt.saveLabel} {formatKr(PRICE_TIOPACK - tiopackPrice)}</p>
+					{:else}
+						<p class="text-4xl font-bold mb-2">{formatKr(PRICE_TIOPACK)}</p>
+						<p class="text-sm text-lime font-bold mb-6">{blackBelt.card3Badge}</p>
+					{/if}
+
+					<p class="text-white/70 leading-[1.55] text-sm mb-3">{blackBelt.card3Desc}</p>
+					<p class="text-sm text-lime/90 font-bold">→ {blackBelt.card3Sharing}</p>
+				</div>
+			</div>
+
+			<!-- CTA -->
+			<div class="text-center mb-16">
+				<a
+					href={BOOKING_URL}
+					target="_blank"
+					rel="noopener noreferrer"
+					onclick={trackBookingClick}
+					class="block w-full md:inline-block md:w-auto bg-lime text-navy uppercase text-[13px] font-bold tracking-[1.5px] rounded-[3px] py-[16px] px-[32px] hover:opacity-90 transition-opacity"
+				>{blackBelt.cta} →</a>
+				<p class="text-white/50 text-sm mt-3">{blackBelt.ctaNote}</p>
+			</div>
+
+			<!-- Företags-onramp -->
+			<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+				<div>
+					<h3 class="font-bold text-xl mb-2">{blackBelt.companyTitle}</h3>
+					<p class="text-white/70 leading-[1.55] max-w-2xl">{blackBelt.companyDesc}</p>
+				</div>
+				<a href="mailto:anders@dailywins.se" class="text-lime hover:text-white transition-colors font-bold flex-shrink-0 self-start md:self-center">
+					{blackBelt.companyCta} →
+				</a>
+			</div>
+		</div>
+	</section>
+
 	<!-- Tools intro -->
 	<section data-slide id="verktyg" class="px-6 md:px-12 pt-16 pb-8 scroll-mt-8">
 		<div class="max-w-4xl mx-auto">
@@ -476,8 +649,8 @@
 			<div class="bg-bg-warm rounded-lg p-6 mb-6">
 				<h4 class="font-bold mb-3">{claudeCode.quickstartTitle}</h4>
 				<ol class="space-y-2 text-gray-text leading-[1.55]">
-					<li class="flex gap-3"><span class="text-blue-accent font-bold">1.</span> {claudeCode.step1} <code class="bg-navy/10 px-2 py-0.5 rounded text-sm font-mono">curl -fsSL https://claude.ai/install.sh | bash</code></li>
-					<li class="flex gap-3"><span class="text-blue-accent font-bold">2.</span> {claudeCode.step2} <code class="bg-navy/10 px-2 py-0.5 rounded text-sm font-mono">claude</code></li>
+					<li class="flex flex-wrap gap-x-3 gap-y-2"><span class="text-blue-accent font-bold">1.</span> <span class="min-w-0">{claudeCode.step1} <code class="bg-navy/10 px-2 py-0.5 rounded text-sm font-mono break-all">curl -fsSL https://claude.ai/install.sh | bash</code></span></li>
+					<li class="flex flex-wrap gap-x-3 gap-y-2"><span class="text-blue-accent font-bold">2.</span> <span class="min-w-0">{claudeCode.step2} <code class="bg-navy/10 px-2 py-0.5 rounded text-sm font-mono">claude</code></span></li>
 					<li class="flex gap-3"><span class="text-blue-accent font-bold">3.</span> {claudeCode.step3}</li>
 				</ol>
 			</div>

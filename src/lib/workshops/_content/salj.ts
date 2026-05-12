@@ -624,6 +624,107 @@ export const saljTranslations: WorkshopTranslations = {
 			en: "Use Git or the tool's built-in version control. It's easy to accidentally overwrite something that worked."
 		}
 	},
+	blackBelt: {
+		label: { sv: 'Nästa steg', en: 'Next step' },
+		title: {
+			sv: 'AI-Black Belt: från nyfiken till självständig',
+			en: 'AI-Black Belt: from curious to independent'
+		},
+		lead: {
+			sv: 'Workshopen visar potentialen. AI-Black Belt installerar den. Personlig 1:1-coaching som tar dig från första AI-flödet till att leda förändringen i hela organisationen — utan att fastna i konsultberoende.',
+			en: 'The workshop reveals the potential. AI-Black Belt installs it. Personal 1:1 coaching that takes you from your first AI workflow to leading change across the entire organization — without getting stuck in consultant dependency.'
+		},
+		formatLabel: { sv: 'Format', en: 'Format' },
+		formatValue: {
+			sv: '1:1-coaching · 1,5 h varannan vecka · digitalt stöd däremellan',
+			en: '1:1 coaching · 1.5 h every other week · digital support in between'
+		},
+
+		testimonial1Quote: {
+			sv: '"Vi visste att vi ville bli bättre på AI, men hade ingen aning om vad som var möjligt. Efter 6 sessioner hade en av oss byggt en reseräkningsapp kopplad till bilens API — helt på egen hand."',
+			en: '"We knew we wanted to get better at AI but had no idea what was possible. After 6 sessions, one of us had built an expense report app connected to the car\'s API — entirely on their own."'
+		},
+		testimonial1Author: { sv: 'Projektledare och VD', en: 'Project lead and CEO' },
+		testimonial2Quote: {
+			sv: '"Jag är egentligen teknikfientlig men vet att all utveckling sker utanför den komfortabla zonen. Jag bad Daily Wins utmana mig så jag nästan blev arg — och de levererade. Nu har jag en AI-assistent skräddarsydd för mitt ledarskap."',
+			en: '"I\'m actually tech-averse but I know all development happens outside the comfort zone. I asked Daily Wins to challenge me until I was almost angry — and they delivered. Now I have an AI assistant tailored to my leadership."'
+		},
+		testimonial2Author: { sv: 'Ledarskapscoach & VD', en: 'Leadership coach & CEO' },
+
+		step1Title: { sv: 'Förståelse', en: 'Understanding' },
+		step1Desc: {
+			sv: 'Konkreta AI-möjligheter — inte hype, inte teori.',
+			en: 'Concrete AI possibilities — not hype, not theory.'
+		},
+		step2Title: { sv: 'Verktyg', en: 'Tools' },
+		step2Desc: {
+			sv: 'Claude, ChatGPT, Lovable och de andra — på riktigt.',
+			en: 'Claude, ChatGPT, Lovable and the rest — for real.'
+		},
+		step3Title: { sv: 'Bygga själv', en: 'Build yourself' },
+		step3Desc: {
+			sv: 'Egna lösningar och rapporter, utan IT-beroende.',
+			en: 'Your own solutions and reports, without IT dependency.'
+		},
+		step4Title: { sv: 'Skala', en: 'Scale' },
+		step4Desc: {
+			sv: 'AI-transformation genom hela organisationen.',
+			en: 'AI transformation across the whole organization.'
+		},
+
+		card1Eyebrow: { sv: 'Prova formatet', en: 'Try the format' },
+		card1Title: { sv: 'Enskilt tillfälle', en: 'Single session' },
+		card1Unit: { sv: '1 × 1,5 h', en: '1 × 1.5 h' },
+		card1Desc: {
+			sv: 'En session. Testa kemin och se hur formatet fungerar för dig.',
+			en: 'One session. Test the chemistry and see how the format works for you.'
+		},
+
+		card2Eyebrow: { sv: 'Vanligaste valet', en: 'Most popular' },
+		card2Title: { sv: 'Kvartal', en: 'Quarterly' },
+		card2Unit: { sv: '6 × 1,5 h över 3 mån', en: '6 × 1.5 h over 3 months' },
+		card2Desc: {
+			sv: 'Från första AI-flöde till etablerad rutin. Hinner igenom Förståelse, Verktyg och in i Bygga själv.',
+			en: 'From first AI workflow to established routine. Covers Understanding, Tools and into Build yourself.'
+		},
+		card2Badge: { sv: '−33 % per timme', en: '−33% per hour' },
+
+		card3Eyebrow: { sv: 'Full transformation', en: 'Full transformation' },
+		card3Title: { sv: 'Tiopack', en: 'Ten-pack' },
+		card3Unit: { sv: '10 × 1,5 h över 5 mån', en: '10 × 1.5 h over 5 months' },
+		card3Desc: {
+			sv: 'Hela vägen från förståelse till organisationsskala.',
+			en: 'All the way from understanding to organization-wide scale.'
+		},
+		card3Badge: { sv: 'Bästa pris · −41 % per timme', en: 'Best value · −41% per hour' },
+		card3Sharing: {
+			sv: 'Enda paketet som kan delas mellan flera personer',
+			en: 'The only package that can be shared between multiple people'
+		},
+
+		saveLabel: { sv: 'Spara', en: 'Save' },
+		originalLabel: { sv: 'ord.', en: 'reg.' },
+
+		offerLabel: { sv: 'Välj ditt paket', en: 'Choose your package' },
+		campaignBanner30: {
+			sv: 'Workshopdeal · Bokar du idag: −30 % på alla paket',
+			en: 'Workshop deal · Book today: −30% on all packages'
+		},
+		campaignBanner10: {
+			sv: 'Workshopdeal · Till månadsskiftet: −10 % på alla paket',
+			en: 'Workshop deal · Until end of month: −10% on all packages'
+		},
+
+		cta: { sv: 'Boka start-samtal', en: 'Book intro call' },
+		ctaNote: { sv: 'Gratis · ingen försäljning', en: 'Free · no sales pitch' },
+
+		companyTitle: { sv: 'Hela ledningsgruppen?', en: 'The whole leadership team?' },
+		companyDesc: {
+			sv: 'Vi bygger program för team om 3-10 personer. Anpassade upplägg, samordnad takt.',
+			en: 'We build programs for teams of 3-10 people. Custom format, coordinated pace.'
+		},
+		companyCta: { sv: 'Hör av dig', en: 'Get in touch' }
+	},
 	qr: {
 		title: { sv: 'Spara den här sidan', en: 'Save this page' },
 		description: {
