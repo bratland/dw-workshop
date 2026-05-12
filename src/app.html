@@ -11,10 +11,7 @@
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
-			gtag('consent', 'default', { analytics_storage: 'denied' });
-			if (localStorage.getItem('analytics_consent') === 'granted') {
-				gtag('consent', 'update', { analytics_storage: 'granted' });
-			}
+			gtag('consent', 'default', { analytics_storage: 'granted' });
 			gtag('config', 'G-F3MW6TC925');
 		</script>
 		%sveltekit.head%
