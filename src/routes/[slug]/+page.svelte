@@ -1,9 +1,22 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { page } from '$app/state';
 	import QrCode from '$lib/components/QrCode.svelte';
-	import { t, toggleLang, getLang } from '$lib/i18n.svelte';
+	import { t, toggleLang, getLang, setTranslations } from '$lib/i18n.svelte';
+	import type { PageData } from './$types';
 
-	const siteUrl = 'https://dw-workshop.vercel.app';
+	let { data }: { data: PageData } = $props();
+
+	// Aktivera workshop-content innan första render. Top-level för att fungera
+	// under SSR (där $effect.pre inte körs); $effect.pre för reactive updates
+	// vid client-side navigation mellan slugs.
+	// svelte-ignore state_referenced_locally
+	setTranslations(data.config.translations);
+	$effect.pre(() => {
+		setTranslations(data.config.translations);
+	});
+
+	const siteUrl = $derived(page.url.origin + page.url.pathname);
 
 	let currentSlide = $state(0);
 	let totalSlides = $state(0);

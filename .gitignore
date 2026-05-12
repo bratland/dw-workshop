@@ -21,3 +21,8 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Brand source package — extracted assets in static/ are tracked,
+# the zip itself is not.
+Brand_Package_Daily_Wins_AB.zip
+
