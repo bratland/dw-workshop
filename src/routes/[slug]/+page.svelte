@@ -108,6 +108,15 @@
 			if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
 
 			if (e.key === 'q' || e.key === 'Q') { showQr = !showQr; return; }
+			if (e.key === 'f' || e.key === 'F') {
+				e.preventDefault();
+				if (document.fullscreenElement) {
+					document.exitFullscreen();
+				} else {
+					document.documentElement.requestFullscreen().catch(() => {});
+				}
+				return;
+			}
 
 			let direction = 0;
 			if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'PageDown' || (e.key === ' ' && !e.shiftKey)) {
